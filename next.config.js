@@ -14,6 +14,15 @@ const nextConfig = {
       },
     ],
   },
+  
+  headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: securityHeaders,
+      },
+    ]
+  },
 }
 
 const ContentSecurityPolicy = `
