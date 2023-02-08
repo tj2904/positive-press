@@ -29,9 +29,13 @@ const ContentSecurityPolicy = `
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
   {
-    key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\n/g, ''),
+    key: "Content-Security-Policy",
+    value: ContentSecurityPolicy.replace(/\n/g, ""),
   },
-];
+  {
+    key: "Access-Control-Allow-Origin",
+    value: "*",
+  },
+]
 
 module.exports = nextConfig
