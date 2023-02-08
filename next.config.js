@@ -17,7 +17,7 @@ const nextConfig = {
 }
 
 const ContentSecurityPolicy = `
-    default-src 'self' https://i3g7qv.deta.dev;
+    default-src 'self' *;
     script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.vercel-insights.com vercel.live;
     style-src 'self' 'unsafe-inline';
     img-src * blob: data:;
