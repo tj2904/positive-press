@@ -2,6 +2,7 @@ import "../styles/globals.css";
 // import "../app/body.css";
 import Header from "./Header";
 import { Inter } from '@next/font/google'
+import { AnalyticsWrapper } from './components/analytics';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', })
 
@@ -21,6 +22,7 @@ export default function RootLayout({
         </div>
         {children}
         </div>
+        <AnalyticsWrapper />
       </body>
     </html>
   )
