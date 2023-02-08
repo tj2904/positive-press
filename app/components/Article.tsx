@@ -14,9 +14,9 @@ function Article(props: NewsResponse) {
     res.then((res) => res.json())
       .then((data) => {
         setOgImage(data.image)
-      })
+      }).catch((error) => {console.error(error)})
   }
-
+  
   useEffect(() => {
     // getOgImage(`https://www.bbc.co.uk/news/uk-england-manchester-64440273`)
     {
