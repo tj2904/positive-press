@@ -39,20 +39,25 @@ function Article(props: NewsResponse) {
   //     // setOgImage(result.ogImage.url)
   //   })
 
+  let percentage = (decimal: number) => {
+    return `${(decimal * 100).toFixed(1)}%`;
+  };
+
+
 
   return (
     <div key={props.id}
       className="border border-slate-500 p-4 rounded-md shadow-md bg-neutral-50">
       {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm
       bg-gradient-to-l from-green-600" style={{ width: rating }}>
-        {props.vaderSummary.compound}
+        {percentage(props.vaderSummary.compound)}
       </div>)}
 
       {props.vaderSummary.compound == 0 && (<div className="text-slate-600 text-sm" >  &nbsp; </div>)}
 
       {props.vaderSummary.compound < 0 && (<div className=" text-slate-600 text-sm
      bg-gradient-to-l  from-red-600" style={{ width: negRating }}>
-        {props.vaderSummary.compound}
+        {percentage(props.vaderSummary.compound)}
       </div>)}
 
 
