@@ -12,9 +12,16 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname:
+          "i3g7qv.deta.dev",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
-  
+
   headers() {
     return [
       {
