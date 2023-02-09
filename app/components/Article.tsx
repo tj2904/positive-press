@@ -24,6 +24,7 @@ function Article(props: NewsResponse) {
     {
       if (!props.imageUrl) {
         getOgImage(`${props.id}`)
+        console.log("imageProps", props.imageUrl)
       }
     }
   }, []);
@@ -65,8 +66,12 @@ function Article(props: NewsResponse) {
 
 
       <h3 className="font-serif font-semibold text-2xl mt-2">{props.title}</h3>
-      {props.imageUrl ? <Image className="rounded-md" src={props.imageUrl} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" /> :
+      {/* {props.imageUrl ? <Image className="rounded-md" src={props.imageUrl} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" /> :
         <Image className="rounded-md" src={ogImage} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" />}
+       */}
+    {ogImage && (  <Image className="rounded-md" src={ogImage} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" />
+)}
+
       <p className="my-2">{props.summary}</p>
       <p className="text-right text-blue-800 my-2"><a href={props.id} className=" bg-slate-300 rounded hover:bg-slate-400 p-1 px-3">Read more...</a></p>
       <div className="flex justify-between items-center text-slate-600 -mb-2">
