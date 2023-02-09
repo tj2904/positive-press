@@ -15,11 +15,12 @@ function Article(props: NewsResponse) {
       )
       .then((data) => {
         setOgImage(data.image)
-      }).catch((error) => { console.error("getOgImage: ",error) })
+      }).catch((error) => { console.error("getOgImage: ", error) })
   }
 
-useEffect(() => {
-  getOgImage(`${props.id}`) }, [props]);
+  useEffect(() => {
+    getOgImage(`${props.id}`)
+  }, [props]);
 
 
   // Get OpenGraph Image
@@ -42,8 +43,8 @@ useEffect(() => {
 
   return (
     <div key={props.id}
-      className="border border-slate-500 p-4 rounded-md shadow-md bg-neutral-50 ">
-      {props.vaderSummary.compound > 0 && (<div className="text-slate-600 dark:text-zinc-200 text-sm
+      className="border border-slate-500 p-4 rounded-md shadow-md ">
+      {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm
       bg-gradient-to-l from-green-600" style={{ width: rating }}>
         {percentage(props.vaderSummary.compound)}
       </div>)}
@@ -56,11 +57,11 @@ useEffect(() => {
       </div>)}
 
 
-      <h3 className="font-serif font-semibold text-2xl mt-2 text-slate-800 dark:text-zinc-200">{props.title}</h3>
-    {ogImage && (  props.imageUrl ? <Image className="rounded-md" src={props.imageUrl} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" /> :
+      <h3 className="font-serif font-semibold text-2xl mt-2">{props.title}</h3>
+      {ogImage && (props.imageUrl ? <Image className="rounded-md" src={props.imageUrl} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" /> :
         <Image className="rounded-md" src={ogImage} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" />
-    )}
-      <p className="my-2 text-slate-800 dark:text-zinc-200">{props.summary}</p>
+      )}
+      <p className="my-2">{props.summary}</p>
       <p className="text-right text-blue-800 my-2"><a href={props.id} className=" bg-slate-300 rounded hover:bg-slate-400 p-1 px-3">Read more...</a></p>
       <div className="flex justify-between items-center text-slate-600 -mb-2">
         <div><SiBbc size={40} /></div>
