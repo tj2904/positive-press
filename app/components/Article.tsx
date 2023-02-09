@@ -56,11 +56,11 @@ useEffect(() => {
       </div>)}
 
 
-      <h3 className="font-serif font-semibold text-2xl mt-2 dark:text-neutral-200">{props.title}</h3>
+      <h3 className="font-serif font-semibold text-2xl mt-2 dark:text-zine-100">{props.title}</h3>
     {ogImage && (  props.imageUrl ? <Image className="rounded-md" src={props.imageUrl} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" /> :
         <Image className="rounded-md" src={ogImage} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" />
     )}
-            <p className="my-2 dark:text-neutral-300">{props.summary}</p>
+            <p className="my-2 dark:text-zinc-100">{props.summary}</p>
       <p className="text-right text-blue-800 my-2"><a href={props.id} className=" bg-slate-300 rounded hover:bg-slate-400 p-1 px-3">Read more...</a></p>
       <div className="flex justify-between items-center text-slate-600 -mb-2">
         <div><SiBbc size={40} /></div>
