@@ -9,22 +9,29 @@ function Article(props: NewsResponse) {
   const negRating = (-(props.vaderSummary.compound) * 100) + "%"
   const date = props.published[2] + "/" + props.published[1] + "/" + props.published[0]
   const [ogImage, setOgImage] = useState<string>()
-  async function getOgImage(url: string) {
-    const res = await fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${url}`)
-      .then((res) => res.json()
-      )
-      .then((data) => {
-        setOgImage(data.image)
-        console.log("data.image", data.image)
-      }).catch((error) => { console.error(error) })
-  }
+  // async function getOgImage(url: string) {
+  //   const res = await fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${url}`)
+  //     .then(res => res.json()
+  //     )
+  //     .then((data) => {
+  //       setOgImage(data.image)
+  //       console.log("data.image", data.image)
+  //     }).catch((error) => { console.error(error) })
+  // }
 
   useEffect(() => {
     // getOgImage(`https://www.bbc.co.uk/news/uk-england-manchester-64440273`)
-    {
-      getOgImage(`${props.id}`)
-    }
-  }, []);
+    
+      // getOgImage(`${props.id}`)
+    
+    const res = fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${props.id}`)
+      .then(res => res.json()
+      )
+      .then((data) => {
+        setOgImage(data.image)
+      }).catch((error) => { console.error(error) })
+
+  }, [props]);
 
   // Get OpenGraph Image
   // const ogs = require('open-graph-scraper');
