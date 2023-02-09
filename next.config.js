@@ -14,7 +14,8 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "**",
+        hostname: "*.deta.dev",
+        pathname: "/**",
       },
     ],
   },
@@ -49,6 +50,10 @@ const securityHeaders = [
     key: "Access-Control-Allow-Origin",
     value: "*",
   },
+  {
+    key: "Cross-Origin-Resource-Policy",
+    value: "cross-origin",
+  }
 ]
 
 module.exports = nextConfig
