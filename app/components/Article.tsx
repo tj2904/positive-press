@@ -9,9 +9,9 @@ function Article(props: NewsResponse) {
   const negRating = (-(props.vaderSummary.compound) * 100) + "%"
   const date = props.published[2] + "/" + props.published[1] + "/" + props.published[0]
   const [ogImage, setOgImage] = useState<string>('')
-  function getOgImage(url: string) {
-    const res = fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${url}`);
-    res.then((res) => res.json())
+  async function  getOgImage(url: string) {
+    const res = await fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${url}`)
+    .then((res) => res.json())
       .then((data) => {
         setOgImage(data.image)
       }).catch((error) => {console.error(error)})
