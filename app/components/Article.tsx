@@ -8,24 +8,21 @@ function Article(props: NewsResponse) {
   const rating = (props.vaderSummary.compound * 100) + "%"
   const negRating = (-(props.vaderSummary.compound) * 100) + "%"
   const date = props.published[2] + "/" + props.published[1] + "/" + props.published[0]
-  const [ogImage, setOgImage] = useState<string>('')
-  async function  getOgImage(url: string) {
+  const [ogImage, setOgImage] = useState<string>()
+  async function getOgImage(url: string) {
     const res = await fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${url}`)
-    .then((res) => res.json()
-    )
+      .then((res) => res.json()
+      )
       .then((data) => {
         setOgImage(data.image)
         console.log("data.image", data.image)
-      }).catch((error) => {console.error(error)})
+      }).catch((error) => { console.error(error) })
   }
 
   useEffect(() => {
     // getOgImage(`https://www.bbc.co.uk/news/uk-england-manchester-64440273`)
     {
-      if (!props.imageUrl) {
-        getOgImage(`${props.id}`)
-        console.log("imageProps", props.imageUrl)
-      }
+      getOgImage(`${props.id}`)
     }
   }, []);
 
@@ -69,8 +66,8 @@ function Article(props: NewsResponse) {
       {/* {props.imageUrl ? <Image className="rounded-md" src={props.imageUrl} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" /> :
         <Image className="rounded-md" src={ogImage} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" />}
        */}
-    {ogImage && (  <Image className="rounded-md" src={ogImage} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" />
-)}
+      {ogImage && (<Image className="rounded-md" src={ogImage} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" />
+      )}
 
       <p className="my-2">{props.summary}</p>
       <p className="text-right text-blue-800 my-2"><a href={props.id} className=" bg-slate-300 rounded hover:bg-slate-400 p-1 px-3">Read more...</a></p>
