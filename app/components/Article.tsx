@@ -11,9 +11,11 @@ function Article(props: NewsResponse) {
   const [ogImage, setOgImage] = useState<string>('')
   async function  getOgImage(url: string) {
     const res = await fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${url}`)
-    .then((res) => res.json())
+    .then((res) => res.json()
+    )
       .then((data) => {
         setOgImage(data.image)
+        console.log("data.image", data.image)
       }).catch((error) => {console.error(error)})
   }
 
