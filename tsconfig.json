@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "lib/fetchNews.js", "app/components/NewsList.tsx", "app/news/live/page.jsx", "app/news/page.tsx"  ],
+, "lib/fetchNews.js", "app/components/NewsList.tsx", "app/news/liveUk/page.jsx", "app/news/page.tsx"  ],
   "exclude": [
     "node_modules"
   ]
