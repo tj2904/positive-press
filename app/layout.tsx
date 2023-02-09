@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 // import "../app/body.css";
-import Header from "./Header";
+import Header from "./components/Header";
 import { Inter } from '@next/font/google'
 import { AnalyticsWrapper } from './components/analytics';
 
@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head />
-      <body className="bg-neutral-50">
+      <body className="bg-neutral-50 dark:bg-slate-800">
         <Header />
         <div className="container mx-auto px-4 mt-16">
         <div className="mt-16 text-transparent text-6xl bg-clip-text bg-gradient-to-r from-blue-700 to-teal-300  text-center font-serif font-extrabold">
