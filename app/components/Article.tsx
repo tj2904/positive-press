@@ -24,7 +24,7 @@ function Article(props: NewsResponse) {
     
       // getOgImage(`${props.id}`)
     
-    fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${props.id}`)
+    const res = fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${props.id}`)
       .then(res => res.json()
       )
       .then((data) => {
