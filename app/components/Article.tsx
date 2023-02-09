@@ -42,7 +42,7 @@ useEffect(() => {
 
   return (
     <div key={props.id}
-      className="border border-slate-500 p-4 rounded-md shadow-md bg-neutral-50">
+      className="border border-slate-500 p-4 rounded-md shadow-md bg-neutral-50 dark:bg-slate-700">
       {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm
       bg-gradient-to-l from-green-600" style={{ width: rating }}>
         {percentage(props.vaderSummary.compound)}
