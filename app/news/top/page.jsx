@@ -11,7 +11,10 @@ function highestRatedNews() {
 
   return (
     <>
-      <h3>Top Scored News of All Time</h3>
+      <h2 className="text-3xl font-extrabold tracking-tight text-gray-700 sm:text-4xl">
+        Top Scored Recent News
+      </h2>
+      <p className="italic text-gray-500 mt-0 mb-4">Ranked for positivity.</p>
       <NewsList newsFeed={sortedTopNews} />
     </>
   )
