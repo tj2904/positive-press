@@ -1,7 +1,7 @@
 import NewsList from "../../../components/NewsList"
 
 async function getData() {
-  const res = await fetch("https://i3g7qv.deta.dev/api/v1/vader/live/world")
+  const res = await fetch("https://i3g7qv.deta.dev/api/v1/vader/live/tech")
   return res.json()
 }
 
@@ -17,7 +17,7 @@ export default async function LiveNewsPage() {
   return (
     <main>
       <h2 className="text-3xl font-extrabold tracking-tight text-gray-700 sm:text-4xl"
-       >Live World BBC News</h2>
+       >Live Technology BBC News</h2>
       <p className="italic text-gray-500 mt-0 mb-4">Ranked for positivity.</p>
       <NewsList newsFeed={sortedNews} />
     </main>
