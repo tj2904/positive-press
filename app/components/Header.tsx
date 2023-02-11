@@ -17,7 +17,7 @@ export default function Header() {
     { name: 'Home', href: '/', current: currentRoute === '/' },
     { name: 'Top', href: '/news/top', current: currentRoute === '/news/top' },
     { name: 'England', href: '/news/live/england', current: currentRoute === '/news/live/england' },
-    { name: 'World', href: '/news/live/world', current: currentRoute === '/news/live/world' },
+    // { name: 'World', href: '/news/live/world', current: currentRoute === '/news/live/world' },
   ]
   
   return (
