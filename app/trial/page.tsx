@@ -2,7 +2,7 @@ import NewsList from "../components/NewsList"
 
  // This is a trial page to test the API and other things
 async function getData() {
-    const res = await fetch('https://i3g7qv.deta.dev/api/v1/vader/live/england')
+    const res = await fetch('https://i3g7qv.deta.dev/api/v1/vader/live/england', {next: {revalidate: 600}})
     return res.json().catch((error) => {console.error("getData",error)})
 }
 
