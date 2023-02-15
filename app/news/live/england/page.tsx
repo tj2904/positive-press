@@ -1,7 +1,7 @@
 import NewsList from "../../../components/NewsList"
 
 async function getData() {
-  const res = await fetch("https://i3g7qv.deta.dev/api/v1/vader/live/england")
+  const res = await fetch("https://i3g7qv.deta.dev/api/v1/vader/live/england", {next: {revalidate: 600}})
   return res.json()
 }
 
