@@ -44,16 +44,18 @@ function Article(props: NewsResponse) {
   return (
     <div key={props.id}
       className="border border-slate-500 p-4 rounded-md shadow-md ">
-      {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm
-      bg-gradient-to-l from-green-600" style={{ width: rating }}>
+      {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-md"> 
+      <div className=" bg-gradient-to-l from-green-600 rounded-md" style={{ width: rating }}>
         {percentage(props.vaderSummary.compound)}
+        </div>
       </div>)}
 
-      {props.vaderSummary.compound == 0 && (<div className="text-slate-600 text-sm" >  &nbsp; </div>)}
+      {props.vaderSummary.compound == 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-md">  &nbsp; </div>)}
 
-      {props.vaderSummary.compound < 0 && (<div className=" text-slate-600 text-sm
-     bg-gradient-to-l  from-red-600" style={{ width: negRating }}>
+      {props.vaderSummary.compound < 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-md">
+        <div className="bg-gradient-to-l from-red-600 rounded-md" style={{ width: negRating }}>
         {percentage(props.vaderSummary.compound)}
+        </div>
       </div>)}
 
 
