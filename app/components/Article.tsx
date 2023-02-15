@@ -22,7 +22,6 @@ function Article(props: NewsResponse) {
     getOgImage(`${props.id}`)
   }, [props]);
 
-
   // Get OpenGraph Image
   // const ogs = require('open-graph-scraper');
   // const options = { url: 'https://www.bbc.co.uk/news/uk-england-norfolk-64377754',
@@ -44,20 +43,19 @@ function Article(props: NewsResponse) {
   return (
     <div key={props.id}
       className="border border-slate-500 p-4 rounded-md shadow-md ">
-      {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-md"> 
+      {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md"> 
       <div className=" bg-gradient-to-l from-green-600 rounded-md" style={{ width: rating }}>
         {percentage(props.vaderSummary.compound)}
         </div>
       </div>)}
 
-      {props.vaderSummary.compound == 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-md">  &nbsp; </div>)}
+      {props.vaderSummary.compound == 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md">  &nbsp; </div>)}
 
-      {props.vaderSummary.compound < 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-md">
+      {props.vaderSummary.compound < 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md">
         <div className="bg-gradient-to-l from-red-600 rounded-md" style={{ width: negRating }}>
         {percentage(props.vaderSummary.compound)}
         </div>
       </div>)}
-
 
       <h3 className="font-serif font-semibold text-2xl mt-2 text-gray-700">{props.title}</h3>
       {ogImage && (props.imageUrl ? <Image className="rounded-md" src={props.imageUrl} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" /> :
