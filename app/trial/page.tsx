@@ -1,4 +1,3 @@
-'use client'
 import Article from "../components/Article"
 
 // This is a trial page to test the API and other things
