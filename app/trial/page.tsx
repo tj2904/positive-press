@@ -39,11 +39,11 @@ export default async function Page() {
     return (
         <main>
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-700 sm:text-4xl">Top Positive News Item</h2>
-            <p className="italic text-gray-500 mt-0 mb-4">Here I'm returning the highest positive rated news article from the live stream. Thinking this maybe of use on the homepage</p>
+            <p className="italic text-gray-500 mt-0 mb-4">The most recents, and the top 5 most positive news stories since the site started.</p>
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="md:col-span-2 ">{singleNews}</div>
                 <div className=" md:col-span-1 bg-neutral-100 rounded-md p-4">
-                    <h3 className="text-xl pb-2">Top 5 All-time Positive Headlines</h3>
+                    <h3 className="text-xl font-extrabold tracking-tight text-gray-700 pb-2">Top 5 All-Time Positive Headlines</h3>
                     <TopNewsHeadlineList data={top5News} />
                 </div>
             </div>
