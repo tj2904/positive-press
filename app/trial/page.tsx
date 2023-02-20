@@ -26,7 +26,7 @@ export default async function Page() {
             <p className="italic text-gray-500 mt-0 mb-4">Here I'm returning the highest positive rated news article from the live stream. Thinking this maybe of use on the homepage</p>
             <div className="grid md:grid-cols-3 gap-4">
                 <div className="col-span-2 ">{singleNews}</div>
-                <div className=" col bg-teal-700 rounded-md p-4">
+                <div className="sm:col-span-2 md:col-span-1  bg-teal-700 rounded-md p-4">
                     <h3 className="text-xl">Second Column</h3>
                     <p>This could be a list of the top 5 of all time for example...</p>
                 </div>
