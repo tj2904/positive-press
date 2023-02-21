@@ -1,4 +1,4 @@
-'use client'
+
 import FrontPageLargeArticle from "../components/FrontPageLargeArticle"
 import TopNewsHeadlineList from "../components/TopNewsHeadlineList"
 

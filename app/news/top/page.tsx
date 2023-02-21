@@ -1,4 +1,3 @@
-'use client'
 import NewsList from "../../components/NewsList"
 
 async function getTopNewsData() {

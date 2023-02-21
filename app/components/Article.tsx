@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { useEffect, useState } from "react";
 import { SiBbc } from "react-icons/si";
 import Image from "next/image";
