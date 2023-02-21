@@ -1,4 +1,4 @@
-import NewsList from "../../components/NewsList"
+import TopStoredArticle from "../../components/TopStoredArticle"
 
 async function getTopNewsData() {
   const res = await fetch(
@@ -18,13 +18,16 @@ export default async function highestRatedNews() {
     }
   })
 
+  const news = sortedTopNews.map((article: NewsResponse) => {
+    return <TopStoredArticle {...article} />
+  })
   return (
     <>
       <h2 className="text-3xl font-extrabold tracking-tight text-gray-700 sm:text-4xl">
         Top Scored Recent News
       </h2>
       <p className="italic text-gray-500 mt-0 mb-4">Ranked for positivity.</p>
-      <NewsList newsFeed={sortedTopNews} />
+      <div className="grid sm:grid-cols-2 gap-6 lg:grid-cols-3 mb-6">{news}</div>
     </>
   )
 }
