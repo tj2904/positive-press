@@ -44,7 +44,7 @@ export default async function Page() {
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="md:col-span-2 ">{singleNews}</div>
                 <div className=" md:col-span-1 bg-neutral-100 rounded-md p-4">
-                    <h3 className="text-xl font-extrabold tracking-tight text-gray-700 pb-2">Top 5 All-Time Positive Headlines</h3>
+                    <h3 className="text-xl font-extrabold tracking-tight text-gray-700 text-center pb-2">Top 5 All-Time Positive Headlines</h3>
                     <TopNewsHeadlineList data={top5News} />
                 </div>
             </div>
