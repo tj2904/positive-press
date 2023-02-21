@@ -1,4 +1,5 @@
 import { SiBbc } from "react-icons/si";
+import PositivityRankingBar from "./PositivityRankingBar";
 
 function Article(props: NewsResponse) {
 
@@ -13,19 +14,9 @@ function Article(props: NewsResponse) {
   return (
     <div key={props.id}
       className="border border-slate-500 p-4 rounded-md shadow-md w-/5">
-      {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md">
-        <div className=" bg-gradient-to-l from-green-600 rounded-md" style={{ width: rating }}>
-          {percentage(props.vaderSummary.compound)}
-        </div>
-      </div>)}
 
-      {props.vaderSummary.compound == 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md">  &nbsp; </div>)}
+      <PositivityRankingBar vaderSummaryCompound={props.vaderSummary.compound} rating={rating} negRating={negRating} />
 
-      {props.vaderSummary.compound < 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md">
-        <div className="bg-gradient-to-l from-red-600 rounded-md" style={{ width: negRating }}>
-          {percentage(props.vaderSummary.compound)}
-        </div>
-      </div>)}
       <h3 className="font-serif font-semibold text-2xl mt-2 text-gray-700">{props.title}</h3>
 
       <img className="rounded-md" src={props.imageUrl} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" />

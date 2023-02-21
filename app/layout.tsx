@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-// import "../app/body.css";
 import Header from "./components/Header";
 import { Inter } from '@next/font/google'
 import { AnalyticsWrapper } from './components/analytics';
