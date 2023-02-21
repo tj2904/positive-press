@@ -23,20 +23,6 @@ function Article(props: NewsResponse) {
     getOgImage(`${props.id}`)
   }, [props]);
 
-  // Get OpenGraph Image
-  // const ogs = require('open-graph-scraper');
-  // const options = { url: 'https://www.bbc.co.uk/news/uk-england-norfolk-64377754',
-  //                  onlyGetOpenGraphInfo: 'true',
-  //                   };
-  // ogs(options)
-  //   .then((data: { error: any; result: any; response: any; }) => {
-  //     const { error, result, response } = data;
-  //     // console.log('error:', error);  // This returns true or false. True if there was an error. The error itself is inside the results object.
-  //      console.log('result:', result); // This contains all of the Open Graph results
-  //     // console.log('response:', response); // This contains the HTML of page
-  //     // setOgImage(result.ogImage.url)
-  //   })
-
   let percentage = (decimal: number) => {
     return `${(decimal * 100).toFixed(1)}%`;
   };
@@ -44,9 +30,9 @@ function Article(props: NewsResponse) {
   return (
     <div key={props.id}
       className="border border-slate-500 p-4 rounded-md shadow-md ">
-      {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md"> 
-      <div className=" bg-gradient-to-l from-green-600 rounded-md" style={{ width: rating }}>
-        {percentage(props.vaderSummary.compound)}
+      {props.vaderSummary.compound > 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md">
+        <div className=" bg-gradient-to-l from-green-600 rounded-md" style={{ width: rating }}>
+          {percentage(props.vaderSummary.compound)}
         </div>
       </div>)}
 
@@ -54,7 +40,7 @@ function Article(props: NewsResponse) {
 
       {props.vaderSummary.compound < 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md">
         <div className="bg-gradient-to-l from-red-600 rounded-md" style={{ width: negRating }}>
-        {percentage(props.vaderSummary.compound)}
+          {percentage(props.vaderSummary.compound)}
         </div>
       </div>)}
 
