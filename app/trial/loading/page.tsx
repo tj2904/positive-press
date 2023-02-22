@@ -11,7 +11,7 @@ function page() {
                 <ArticleSkelton />
                 <ArticleSkelton />
                 <ArticleSkelton />
-
+                
             </div>
         </>
     )
