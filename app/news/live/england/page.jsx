@@ -1,4 +1,4 @@
-'use client'
+
 import NewsList from "../../../components/NewsList"
 
 async function getData() {
@@ -10,11 +10,13 @@ async function getData() {
 }
 
 export default async function LiveNewsPage() {
-  const getNewsData: any = await getData()
+  // const getNewsData: any = await getData()
+  const getNewsData = await getData()
   // Wait for the promises to resolve
-  const data: any= await Promise.all([getNewsData])
+  // const data: any= await Promise.all([getNewsData])
+  const data = await Promise.all([getNewsData])
 
-  const sortedNews = data.sort((a: NewsResponse, b: NewsResponse) => {
+  const sortedNews = data.sort((a, b) => {
     if (a.vaderSummary.compound > b.vaderSummary.compound) {
       return -1
     }
