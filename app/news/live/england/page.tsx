@@ -10,7 +10,9 @@ async function getData() {
 }
 
 export default async function LiveNewsPage() {
-  const data = await getData()
+  const getNewsData: any = await getData()
+  // Wait for the promises to resolve
+  const data: any= await Promise.all([getNewsData])
 
   const sortedNews = data.sort((a: NewsResponse, b: NewsResponse) => {
     if (a.vaderSummary.compound > b.vaderSummary.compound) {
