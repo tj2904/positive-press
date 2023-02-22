@@ -2,7 +2,7 @@
 import NewsList from "../../../components/NewsList"
 
 async function getData() {
-  const res = await fetch("https://i3g7qv.deta.dev/api/v1/vader/live/england", {next: {revalidate: 600}})
+  const res = await fetch("https://i3g7qv.deta.dev/api/v1/vader/live/england", {cache: 'no-store'})
   if(!res.ok) {
     throw new Error('Failed to fetch live news');
   }
@@ -10,9 +10,7 @@ async function getData() {
 }
 
 export default async function LiveNewsPage() {
-  const getNewsData: any = await getData()
-  // Wait for the promises to resolve
-  const data: any= await Promise.all([getNewsData])
+  const data = await getData()
 
   const sortedNews = data.sort((a: NewsResponse, b: NewsResponse) => {
     if (a.vaderSummary.compound > b.vaderSummary.compound) {
