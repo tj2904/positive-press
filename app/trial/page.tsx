@@ -3,19 +3,23 @@ import FrontPageLargeArticle from "../components/FrontPageLargeArticle"
 import TopNewsHeadlineList from "../components/TopNewsHeadlineList"
 
 // This is a trial page to test the API and other things
-async function getData() {
-    const res = await fetch('https://i3g7qv.deta.dev/api/v1/vader/live/england', { next: { revalidate: 600 } })
+async function getNewsData() {
+    const res = await fetch('https://i3g7qv.deta.dev/api/v1/vader/live/england', { cache: 'no-store' })
     return res.json().catch((error) => { console.error("getData Error: ", error) })
 }
 
-async function getTopNewsData() {
+async function getTop5NewsData() {
     const res = await fetch('https://i3g7qv.deta.dev/api/v1/vader/summary/pos/top', { next: { revalidate: 600 } })
-    return res.json().catch((error) => { console.error("getData Error: ", error) })
+    return res.json().catch((error) => { console.error("getTopNewsData Error: ", error) })
 }
 
 export default async function Page() {
-    const data = await getData()
-    const topNewsData = await getTopNewsData()
+    // Initiate both requests in parallel
+    const getData: any = getNewsData();
+    const getTopNewsData: any = getTop5NewsData();
+    // Wait for the promises to resolve
+    const [data, topNewsData] = await Promise.all([getData, getTopNewsData]);
+
 
     const sortedNews = data.sort((a: NewsResponse, b: NewsResponse) => {
         if (a.vaderSummary.compound > b.vaderSummary.compound) {
@@ -40,7 +44,7 @@ export default async function Page() {
     return (
         <main>
             <h1 className="text-3xl font-extrabold tracking-tight text-gray-700 sm:text-4xl">Top Positive News</h1>
-            <p className="italic text-gray-500 mt-0 mb-4">The most recents, and the top 5 most positive news stories since the site started.</p>
+            <p className="italic text-gray-500 mt-0 mb-4">The most recent article from England, and the top 5 most positive news stories since the site started.</p>
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="md:col-span-2 ">{singleNews}</div>
                 <div className=" md:col-span-1 bg-neutral-100 rounded-md p-4">
