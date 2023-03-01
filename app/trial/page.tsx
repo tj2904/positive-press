@@ -4,7 +4,7 @@ import TopNewsHeadlineList from "../components/TopNewsHeadlineList"
 
 // This is a trial page to test the API and other things
 async function getNewsData() {
-    const res = await fetch('https://i3g7qv.deta.dev/api/v1/vader/live/england', { cache: 'no-store' })
+    const res = await fetch('https://i3g7qv.deta.dev/api/v1/vader/live/england', { cache: 'no-store' },)
     return res.json().catch((error) => { console.error("getData Error: ", error) })
 }
 
@@ -15,8 +15,8 @@ async function getTop5NewsData() {
 
 export default async function Page() {
     // Initiate both requests in parallel
-    const getData: any = getNewsData();
-    const getTopNewsData: any = getTop5NewsData();
+    const getData = getNewsData();
+    const getTopNewsData = getTop5NewsData();
     // Wait for the promises to resolve
     const [data, topNewsData] = await Promise.all([getData, getTopNewsData]);
 
