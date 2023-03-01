@@ -42,7 +42,7 @@ export default async function Page() {
     const top5News = sortedTopNews.slice(0, 5)
 
     return (
-        <main>
+        <main className="mb-14">
             <h1 className="text-3xl font-extrabold tracking-tight text-gray-700 sm:text-4xl">Top Positive News</h1>
             <p className="italic text-gray-500 mt-0 mb-4">The most recent article from England, and the top 5 most positive news stories since the site started.</p>
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
