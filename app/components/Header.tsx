@@ -36,6 +36,16 @@ export default function Header() {
       href: "/news/live/entertainment_and_arts",
       current: currentRoute === "/news/live/entertainment_and_arts",
     },
+    {
+      name: "Education",
+      href: "/news/live/education",
+      current: currentRoute === "/news/live/education",
+    },
+    {
+      name: "Business",
+      href: "/news/live/business",
+      current: currentRoute === "/news/live/business",
+    },
   ]
   
   return (
