@@ -3,11 +3,14 @@ import TopNewsHeadlineList from "../components/TopNewsHeadlineList"
 
 // This is a trial page to test the API and other things
 async function getNewsData() {
-  const res = await fetch("https://i3g7qv.deta.dev/api/v1/vader/live/england", {
-    cache: "no-store",
-  })
+  const res = await fetch(
+    "https://positive-press-api-staging.herokuapp.com/api/v1/vader/live/uk",
+    {
+      cache: "no-store",
+    },
+  )
   return res.json().catch((error) => {
-    console.error("getData Error: ", error)
+    console.error("getData UK Error: ", error)
   })
 }
 
@@ -17,7 +20,7 @@ async function getTopNewsData() {
     { next: { revalidate: 600 } },
   )
   return res.json().catch((error) => {
-    console.error("getData Error: ", error)
+    console.error("getData db Top Error: ", error)
   })
 }
 
@@ -50,7 +53,7 @@ export default async function Page() {
         Top Positive News
       </h1>
       <p className="italic text-gray-500 mt-0 mb-4">
-        The most recent article from England, and the top 5 most positive news
+        The most recent article from the UK, and the top 5 most positive BBC England news
         stories since the site started.
       </p>
       <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">

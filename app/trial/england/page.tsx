@@ -1,5 +1,5 @@
 
-import NewsList from "../../../components/NewsList"
+import NewsList from "../../components/NewsList"
 
 async function getData() {
   const res = await fetch("https://i3g7qv.deta.dev/api/v1/vader/live/england", {cache: 'no-store'})
