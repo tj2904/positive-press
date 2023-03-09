@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { SiBbc } from "react-icons/si";
 import Image from "next/image";
 import PositivityRankingBar from "./PositivityRankingBar";
+import { TfiThumbUp, TfiThumbDown } from "react-icons/tfi"
 
 function Article(props: NewsResponse) {
 
@@ -39,20 +40,61 @@ function Article(props: NewsResponse) {
 
 
   return (
-    <div key={props.id}
-      className="border border-slate-500 p-4 rounded-md shadow-md ">
+    <div
+      key={props.id}
+      className="border border-slate-500 p-4 rounded-md shadow-md "
+    >
+      <PositivityRankingBar
+        vaderSummaryCompound={props.vaderSummary.compound}
+        rating={rating}
+        negRating={negRating}
+      />
 
-      <PositivityRankingBar vaderSummaryCompound={props.vaderSummary.compound} rating={rating} negRating={negRating} />
-
-      <h3 className="font-serif font-semibold text-2xl mt-2 text-gray-700">{props.title}</h3>
-      {ogImage && (props.imageUrl ? <Image className="rounded-md" src={props.imageUrl} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" /> :
-        <Image className="rounded-md" src={ogImage} width="1024" height="576" alt="bbc news image" crossOrigin="anonymous" />
-      )}
+      <h3 className="font-serif font-semibold text-2xl mt-2 text-gray-700">
+        {props.title}
+      </h3>
+      {ogImage &&
+        (props.imageUrl ? (
+          <Image
+            className="rounded-md"
+            src={props.imageUrl}
+            width="1024"
+            height="576"
+            alt="bbc news image"
+            crossOrigin="anonymous"
+          />
+        ) : (
+          <Image
+            className="rounded-md"
+            src={ogImage}
+            width="1024"
+            height="576"
+            alt="bbc news image"
+            crossOrigin="anonymous"
+          />
+        ))}
       <p className="my-2 text-gray-700">{props.summary}</p>
-      <p className="text-right text-blue-800 my-2"><a href={props.id} className=" bg-slate-300 rounded hover:bg-slate-400 p-1 px-3">Read more...</a></p>
+      <p className="text-right text-blue-800 my-2">
+        <a
+          href={props.id}
+          className=" bg-slate-300 rounded hover:bg-slate-400 p-1 px-3"
+        >
+          Read more...
+        </a>
+      </p>
       <div className="flex justify-between items-center text-slate-600 -mb-2">
-        <div><SiBbc size={40} /></div>
+        <div>
+          <SiBbc size={40} />
+        </div>
         <div>{date}</div>
+      </div>
+      <hr className="mt-4" />
+      <div className=" flex justify-between mt-4">
+        <div><TfiThumbUp /> </div>
+        <div className="text-sm text-slate-600">Agree with classifcation?</div>
+        <div>
+          <TfiThumbDown />
+        </div>
       </div>
     </div>
   )
