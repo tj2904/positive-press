@@ -24,10 +24,10 @@ export default function Home() {
           <Image className="h-18" src={logo} alt="Positive Press" width="82" />
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <div className="inline-flex space-x-6">
-              {/* <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
+              <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
                 Comming Soon...
               </span>
-              <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
+              {/*  <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
                 <span>Just shipped v1.0</span>
                 <HiChevronRight
                   className="h-5 w-5 text-gray-500"
