@@ -6,7 +6,7 @@ export default function PositivityRankingBar(props: any) {
 
 
   return (
-    <>
+    <div data-testid="article-rating">
       {props.vaderSummaryCompound > 0 && (<div className="text-slate-600 text-sm bg-gray-100 rounded-r-md">
         <div className=" bg-gradient-to-l from-green-600 rounded-md" style={{ width: props.rating }}>
           {percentage(props.vaderSummaryCompound, 1)}
@@ -20,6 +20,6 @@ export default function PositivityRankingBar(props: any) {
           {percentage(props.vaderSummaryCompound, 1)}
         </div>
       </div>)}
-    </>
+    </div>
   )
 }
