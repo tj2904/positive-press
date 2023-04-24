@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders PostivityRankingBar with green 1`] = `undefined`;
+
+exports[`renders PostivityRankingBar with red 1`] = `undefined`;
+
 exports[`renders nav bar unchanged 1`] = `
 <div>
   <nav
