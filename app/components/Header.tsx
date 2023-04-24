@@ -91,6 +91,7 @@ export default function Header() {
                         <Link
                           key={item.name}
                           href={item.href}
+                          data-testid={`nav-${item.name}`}
                           className={classNames(
                             item.current
                               ? "bg-gray-900 text-white"
