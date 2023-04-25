@@ -57,7 +57,7 @@ export default function Home() {
               className="text-sm font-semibold leading-6 text-white"
             >
               <SiGithub className="text-white text-xl mr-2 leading-6 inline" />
-              View sourcecode on GitHub <span aria-hidden="true">→</span>
+              View source code on GitHub <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
