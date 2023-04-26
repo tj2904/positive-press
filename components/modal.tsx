@@ -51,11 +51,11 @@ export default function Modal({ show, close }: any) {
                       as="h3"
                       className="text-base font-semibold leading-6 text-gray-900"
                     >
-                      The site isn&apost ready for prime-time yet...
+                      The site isn&apos;t ready for prime-time yet...
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
-                        ...but if you can&apost wait any longer, you can have a
+                        ...but if you can&apos;t wait any longer, you can have a
                         sneak peek. <br />
                         You have to promise though, to accept errors and weird
                         behaviour though while everything is polished!
@@ -69,7 +69,7 @@ export default function Modal({ show, close }: any) {
                     className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2"
                   >
                     <a href="https://staging-positive-press.vercel.app/news/top">
-                      Let&aposs see the site!
+                      Let&apos;s see the site!
                     </a>
                   </button>
                   <button
