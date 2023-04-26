@@ -1,10 +1,16 @@
 import { HiChevronRight } from "react-icons/hi";
+import {HiRocketLaunch} from "react-icons/hi2"
 import screenshot from "../public/screenshot-trial-page.png";
 import logo from "../public/logo-512x512.png";
 import Image from "next/image";
 import { SiGithub } from "react-icons/si";
+import Modal from "../components/modal";
+import { useState } from "react";
 
 export default function Home() {
+  const [modal, setModal] = useState(false);
+  const Toggle = () => setModal(!modal);
+
   return (
     <div className="relative isolate overflow-hidden bg-gray-900">
       <div
@@ -45,22 +51,23 @@ export default function Home() {
             algorthims that find the most up-beat and heart-warming stories.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            {/* <a
-              href="#"
+            <button
+              onClick={() => Toggle()}
               className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
             >
-              Load the App
-            </a> */}
-
+              <HiRocketLaunch className="inline mr-2" /> Launch
+              the App
+            </button>
             <a
               href="https://github.com/tj2904/positive-press"
               className="text-sm font-semibold leading-6 text-white"
             >
-              <SiGithub className="text-white text-xl mr-2 leading-6 inline" />
+              <SiGithub className="text-white text-xl  leading-6 inline" />
               View source code on GitHub <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
+        <Modal show={modal} close={Toggle} />
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <Image
