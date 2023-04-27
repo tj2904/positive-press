@@ -9,7 +9,6 @@ export default function Document() {
         name="description"
         content="Ranking and sorting news to find the positive."
       />
-      <link rel="icon" href="/public/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body>
         <Main />
