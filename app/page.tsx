@@ -5,8 +5,8 @@ import screenshot from "../public/screenshot-trial-page.png"
 import logo from "../public/logo-512x512.png"
 import Image from "next/image"
 import { SiGithub } from "react-icons/si"
-import Modal from "../components/modal"
 import { useState } from "react"
+import Modal from "./components/Modal"
 
 export default function Home() {
   const [modal, setModal] = useState(false)
