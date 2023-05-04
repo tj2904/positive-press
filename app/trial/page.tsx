@@ -37,7 +37,7 @@ export default async function Page() {
   })
 
   const topNewsData: any = await getTopNewsData()
-  const sortedTopNews = topNewsData.data[0].sort(
+  const sortedTopNews = topNewsData.data._items.sort(
     (a: NewsResponse, b: NewsResponse) => {
       if (a.vaderSummary.compound > b.vaderSummary.compound) {
         return -1
@@ -53,8 +53,8 @@ export default async function Page() {
         Top Positive News
       </h1>
       <p className="italic text-gray-500 mt-0 mb-4">
-        The most recent article from the UK, and the top 5 most positive BBC England news
-        stories since the site started.
+        The most recent article from the UK, and the top 5 most positive BBC
+        England news stories since the site started.
       </p>
       <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
         <div className="md:col-span-2 ">{singleNews}</div>
