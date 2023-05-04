@@ -68,7 +68,7 @@ export default function Modal({ show, close }: any) {
                     type="button"
                     className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2"
                   >
-                    <a href="https://staging-positive-press.vercel.app/news/top">
+                    <a href="https://positive-press.vercel.app/news/top">
                       I promise - let me in!
                     </a>
                   </button>
@@ -78,7 +78,7 @@ export default function Modal({ show, close }: any) {
                     onClick={() => close()}
                     ref={cancelButtonRef}
                   >
-                    I&apos;ll wait for launch
+                    I&apos;ll wait for the launch
                   </button>
                 </div>
               </Dialog.Panel>
