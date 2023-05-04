@@ -73,7 +73,7 @@ module.exports = withSentryConfig(
     silent: true,
 
     org: "tj2904",
-    project: "postive-press",
+    project: "positive-press",
   },
   {
     // For all available options, see:
