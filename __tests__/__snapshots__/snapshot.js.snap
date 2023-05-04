@@ -75,7 +75,6 @@ exports[`renders nav bar unchanged 1`] = `
                 alt="Positive Press"
                 class="hidden h-8 w-auto lg:block"
                 data-nimg="1"
-                data-testid="nav-logo1"
                 decoding="async"
                 height="32"
                 loading="lazy"
