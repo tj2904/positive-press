@@ -70,14 +70,14 @@ export default function Header() {
                   <Link href="/">
                     <Image
                       className="block h-8 w-auto lg:hidden"
-                      src="/public/images/favicon-32x32.png"
+                      src="/favicon-32x32.png"
                       width="32"
                       height="32"
                       alt="Positive Press"
                     />
                     <Image
                       className="hidden h-8 w-auto lg:block"
-                      src="/public/images/favicon-32x32.png"
+                      src="/images/favicon-32x32.png"
                       width="32"
                       height="32"
                       alt="Positive Press"
