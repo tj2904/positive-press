@@ -12,7 +12,7 @@ async function getTopNewsData() {
 
 export default async function highestRatedNews() {
   const topNewsData = await getTopNewsData()
-  const sortedTopNews = topNewsData.data[0].sort((a: NewsResponse, b: NewsResponse) => {
+  const sortedTopNews = topNewsData.data._items.sort((a: NewsResponse, b: NewsResponse) => {
     if (a.vaderSummary.compound > b.vaderSummary.compound) {
       return -1
     }
