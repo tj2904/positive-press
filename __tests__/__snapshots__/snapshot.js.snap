@@ -68,7 +68,6 @@ exports[`renders nav bar unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimages%2Ffavicon-32x32.png&w=64&q=75"
                 srcset="/_next/image?url=%2Fimages%2Ffavicon-32x32.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Ffavicon-32x32.png&w=64&q=75 2x"
-
                 style="color: transparent;"
                 width="32"
               />
@@ -81,7 +80,6 @@ exports[`renders nav bar unchanged 1`] = `
                 loading="lazy"
                 src="/_next/image?url=%2Fimages%2Ffavicon-32x32.png&w=64&q=75"
                 srcset="/_next/image?url=%2Fimages%2Ffavicon-32x32.png&w=32&q=75 1x, /_next/image?url=%2Fimages%2Ffavicon-32x32.png&w=64&q=75 2x"
-
                 style="color: transparent;"
                 width="32"
               />
