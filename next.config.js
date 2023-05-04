@@ -17,6 +17,11 @@ const nextConfig = {
         hostname: "*.herokuapp.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "*.deta.dev",
+        pathname: "/**",
+      },
     ],
   },
 
