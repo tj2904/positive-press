@@ -2,7 +2,10 @@
 import NewsList from "../../components/NewsList"
 
 async function getData() {
-  const res = await fetch("https://i3g7qv.deta.dev/api/v1/vader/live/england", {cache: 'no-store'})
+  const res = await fetch(
+    "https://positive-press-api-staging.herokuapp.com/api/v1/vader/live/england",
+    { cache: "no-store" },
+  )
   if(!res.ok) {
     throw new Error('Failed to fetch live news');
   }
