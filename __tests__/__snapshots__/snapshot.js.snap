@@ -66,8 +66,8 @@ exports[`renders nav bar unchanged 1`] = `
                 decoding="async"
                 height="32"
                 loading="lazy"
-                src="/_next/image?url=%2F..%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=64&q=75"
-                srcset="/_next/image?url=%2F..%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=32&q=75 1x, /_next/image?url=%2F..%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=64&q=75 2x"
+                src="/_next/image?url=%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=64&q=75"
+                srcset="/_next/image?url=%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=32&q=75 1x, /_next/image?url=%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=64&q=75 2x"
                 style="color: transparent;"
                 width="32"
               />
@@ -78,8 +78,8 @@ exports[`renders nav bar unchanged 1`] = `
                 decoding="async"
                 height="32"
                 loading="lazy"
-                src="/_next/image?url=%2F..%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=64&q=75"
-                srcset="/_next/image?url=%2F..%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=32&q=75 1x, /_next/image?url=%2F..%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=64&q=75 2x"
+                src="/_next/image?url=%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=64&q=75"
+                srcset="/_next/image?url=%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=32&q=75 1x, /_next/image?url=%2Fpublic%2Fimages%2Ffavicon-32x32.png&w=64&q=75 2x"
                 style="color: transparent;"
                 width="32"
               />
