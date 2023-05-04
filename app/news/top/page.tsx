@@ -2,7 +2,7 @@ import TopStoredArticle from "../../components/TopStoredArticle"
 
 async function getTopNewsData() {
   const res = await fetch(
-    "https://i3g7qv.deta.dev/api/v1/vader/summary/pos/top",
+    "https://positive-press-api-staging.herokuapp.com/api/v1/vader/summary/pos/top",
     { next: { revalidate: 600 } },
   )
   return res.json().catch((error) => {
@@ -12,7 +12,7 @@ async function getTopNewsData() {
 
 export default async function highestRatedNews() {
   const topNewsData = await getTopNewsData()
-  const sortedTopNews = topNewsData.data[0].sort((a: NewsResponse, b: NewsResponse) => {
+  const sortedTopNews = topNewsData.data._items.sort((a: NewsResponse, b: NewsResponse) => {
     if (a.vaderSummary.compound > b.vaderSummary.compound) {
       return -1
     }

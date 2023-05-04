@@ -16,7 +16,7 @@ async function getNewsData() {
 
 async function getTopNewsData() {
   const res = await fetch(
-    "https://i3g7qv.deta.dev/api/v1/vader/summary/pos/top",
+    "https://positive-press-api-staging.herokuapp.com/api/v1/vader/summary/pos/top",
     { next: { revalidate: 600 } },
   )
   return res.json().catch((error) => {
