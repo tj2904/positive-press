@@ -79,6 +79,7 @@ export default function Home() {
               width={2432}
               height={1442}
               className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+              priority
             />
           </div>
         </div>
