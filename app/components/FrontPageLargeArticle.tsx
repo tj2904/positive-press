@@ -7,10 +7,6 @@ function Article(props: NewsResponse) {
   const negRating = (-(props.vaderSummary.compound) * 100) + "%"
   const date = props.published[2] + "/" + props.published[1] + "/" + props.published[0]
 
-  let percentage = (decimal: number) => {
-    return `${(decimal * 100).toFixed(1)}%`;
-  };
-
   return (
     <div key={props.id}
       className="border border-slate-500 p-4 rounded-md shadow-md w-/5">

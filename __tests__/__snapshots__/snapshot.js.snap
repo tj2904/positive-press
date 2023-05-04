@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Article unchanged 1`] = `undefined`;
+
+exports[`renders PostivityRankingBar with green 1`] = `undefined`;
+
+exports[`renders PostivityRankingBar with red 1`] = `undefined`;
+
+exports[`renders nav bar unchanged 1`] = `
+<div>
+  <nav
+    class="bg-gray-800"
+    data-headlessui-state=""
+  >
+    <div
+      class="container mx-auto max-w-8xl px-4 sm:px-6 lg:px-8"
+    >
+      <div
+        class="relative flex h-16 items-center justify-between"
+      >
+        <div
+          class="absolute inset-y-0 left-0 flex items-center sm:hidden"
+        >
+          <button
+            aria-expanded="false"
+            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            data-headlessui-state=""
+            id="headlessui-disclosure-button-:r0:"
+            type="button"
+          >
+            <span
+              class="sr-only"
+            >
+              Open main menu
+            </span>
+            <svg
+              aria-hidden="true"
+              class="block h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+        >
+          <div
+            class="flex flex-shrink-0 items-center"
+          >
+            <a
+              href="/"
+            >
+              <img
+                alt="Positive Press"
+                class="block h-8 w-auto lg:hidden"
+                data-nimg="1"
+                decoding="async"
+                height="32"
+                loading="lazy"
+                src="/_next/image?url=%2Ffavicon-32x32.png&w=64&q=75"
+                srcset="/_next/image?url=%2Ffavicon-32x32.png&w=32&q=75 1x, /_next/image?url=%2Ffavicon-32x32.png&w=64&q=75 2x"
+                style="color: transparent;"
+                width="32"
+              />
+              <img
+                alt="Positive Press"
+                class="hidden h-8 w-auto lg:block"
+                data-nimg="1"
+                decoding="async"
+                height="32"
+                loading="lazy"
+                src="/_next/image?url=%2Ffavicon-32x32.png&w=64&q=75"
+                srcset="/_next/image?url=%2Ffavicon-32x32.png&w=32&q=75 1x, /_next/image?url=%2Ffavicon-32x32.png&w=64&q=75 2x"
+                style="color: transparent;"
+                width="32"
+              />
+            </a>
+          </div>
+          <div
+            class="hidden sm:ml-6 sm:block"
+          >
+            <div
+              class="flex space-x-4"
+            >
+              <a
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                data-testid="nav-Home"
+                href="/"
+              >
+                Home
+              </a>
+              <a
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                data-testid="nav-Top"
+                href="/news/top"
+              >
+                Top
+              </a>
+              <a
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                data-testid="nav-England"
+                href="/news/live/england"
+              >
+                England
+              </a>
+              <a
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                data-testid="nav-World"
+                href="/news/live/world"
+              >
+                World
+              </a>
+              <a
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                data-testid="nav-Tech"
+                href="/news/live/technology"
+              >
+                Tech
+              </a>
+              <a
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                data-testid="nav-Ents & Arts"
+                href="/news/live/entertainment_and_arts"
+              >
+                Ents & Arts
+              </a>
+              <a
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                data-testid="nav-Education"
+                href="/news/live/education"
+              >
+                Education
+              </a>
+              <a
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                data-testid="nav-Business"
+                href="/news/live/business"
+              >
+                Business
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
