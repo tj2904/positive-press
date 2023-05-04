@@ -1,7 +1,5 @@
-'use client'
-import { useEffect, useState } from "react";
+
 import { SiBbc } from "react-icons/si";
-import Image from "next/image";
 import PositivityRankingBar from "./PositivityRankingBar";
 
 function Article(props: NewsResponse) {
@@ -9,22 +7,6 @@ function Article(props: NewsResponse) {
   const rating = (props.vaderSummary.compound * 100) + "%"
   const negRating = (-(props.vaderSummary.compound) * 100) + "%"
   const date = props.published[2] + "/" + props.published[1] + "/" + props.published[0]
-
-
-  // Get OpenGraph Image
-  // const ogs = require('open-graph-scraper');
-  // const options = { url: 'https://www.bbc.co.uk/news/uk-england-norfolk-64377754',
-  //                  onlyGetOpenGraphInfo: 'true',
-  //                   };
-  // ogs(options)
-  //   .then((data: { error: any; result: any; response: any; }) => {
-  //     const { error, result, response } = data;
-  //     // console.log('error:', error);  // This returns true or false. True if there was an error. The error itself is inside the results object.
-  //      console.log('result:', result); // This contains all of the Open Graph results
-  //     // console.log('response:', response); // This contains the HTML of page
-  //     // setOgImage(result.ogImage.url)
-  //   })
-
 
   return (
     <div

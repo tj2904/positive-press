@@ -12,12 +12,16 @@ function Article(props: NewsResponse) {
   const date = props.published.split(' ').slice(0, 4).join(' ')
   const [ogImage, setOgImage] = useState<string>()
   async function getOgImage(url: string) {
-    await fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${url}`)
-      .then(res => res.json()
-      )
+    await fetch(
+      `https://positive-press-api-staging.herokuapp.com/api/v1/og/?url=${url}`,
+    )
+      .then((res) => res.json())
       .then((data) => {
         setOgImage(data.image)
-      }).catch((error) => { console.error("getOgImage: ", error) })
+      })
+      .catch((error) => {
+        console.error("getOgImage: ", error)
+      })
   }
 
   useEffect(() => {

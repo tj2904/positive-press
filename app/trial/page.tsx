@@ -5,9 +5,7 @@ import TopNewsHeadlineList from "../components/TopNewsHeadlineList"
 async function getNewsData() {
   const res = await fetch(
     "https://positive-press-api-staging.herokuapp.com/api/v1/vader/live/uk",
-    {
-      cache: "no-store",
-    },
+    { next: { revalidate: 300 } },
   )
   return res.json().catch((error) => {
     console.error("getData UK Error: ", error)

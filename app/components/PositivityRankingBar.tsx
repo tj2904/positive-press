@@ -1,9 +1,6 @@
-import React from 'react'
 import { percentage } from '../utils/formatting';
 
 export default function PositivityRankingBar(props: any) {
-
-
 
   return (
     <div data-testid="article-rating">

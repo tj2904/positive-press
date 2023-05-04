@@ -1,4 +1,3 @@
-
 import NewsList from "../../components/NewsList"
 
 async function getData() {

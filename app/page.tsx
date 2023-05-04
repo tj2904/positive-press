@@ -1,8 +1,8 @@
 "use client"
 import { HiChevronRight } from "react-icons/hi"
 import { HiRocketLaunch } from "react-icons/hi2"
-import screenshot from "../public/screenshot-trial-page.png"
-import logo from "../public/logo-512x512.png"
+import screenshot from "../public/images/screenshot-trial-page.png"
+import logo from "../public/images/logo-512x512.png"
 import Image from "next/image"
 import { SiGithub } from "react-icons/si"
 import { useState } from "react"
@@ -60,10 +60,13 @@ export default function Home() {
             </button>
             <a
               href="https://github.com/tj2904/positive-press"
-              className="text-sm font-semibold leading-6 text-white"
+              className="text-sm font-semibold leading-6 text-white flex items-center "
             >
               <SiGithub className="text-white text-xl mr-2 leading-6 inline" />
-              View source code on GitHub <span aria-hidden="true">→</span>
+              View source code on GitHub{" "}
+              <span aria-hidden="true" className=" ml-2">
+                →
+              </span>
             </a>
           </div>
         </div>
