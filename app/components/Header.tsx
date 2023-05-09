@@ -14,7 +14,7 @@ export default function Header() {
   const currentRoute = usePathname();
   
   const navigation = [
-    { name: "Home", href: "/", current: currentRoute === "/" },
+    { name: "Home", href: "/news", current: currentRoute === "/news/" },
     { name: "Top", href: "/news/top", current: currentRoute === "/news/top" },
     {
       name: "England",

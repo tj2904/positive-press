@@ -47,7 +47,6 @@ function Article(props: NewsResponse) {
             height="576"
             alt="bbc news image"
             crossOrigin="anonymous"
-            placeholder="blur"
           />
         ) : (
           <Image
