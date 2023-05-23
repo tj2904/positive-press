@@ -2,7 +2,7 @@ import NewsList from "../../components/NewsList"
 
 async function getData() {
   const res = await fetch(
-    "https://positive-press-api-staging.herokuapp.com/api/v1/vader/live/england",
+    "https://positive-press-api.herokuapp.com/api/v1/vader/live/england",
     { cache: "no-store" },
   )
   if(!res.ok) {

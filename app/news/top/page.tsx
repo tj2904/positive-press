@@ -2,7 +2,7 @@ import TopStoredArticle from "../../components/TopStoredArticle"
 
 async function getTopNewsData() {
   const res = await fetch(
-    "https://positive-press-api-staging.herokuapp.com/api/v1/vader/summary/pos/top",
+    "https://positive-press-api.herokuapp.com/api/v1/vader/summary/pos/top",
     { next: { revalidate: 600 } },
   )
   return res.json().catch((error) => {
