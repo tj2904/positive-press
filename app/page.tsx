@@ -1,11 +1,9 @@
-"use client"
 import { HiChevronRight } from "react-icons/hi"
 import { HiRocketLaunch } from "react-icons/hi2"
+import { SiGithub } from "react-icons/si"
 import screenshot from "../public/images/screenshot-trial-page-compressed.png"
 import logo from "../public/images/logo-512x512.png"
 import Image from "next/image"
-import { SiGithub } from "react-icons/si"
-import Modal from "./components/Modal"
 
 export default function Home() {
 
