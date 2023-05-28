@@ -7,9 +7,7 @@ async function getNewsData() {
     "https://positive-press-api.herokuapp.com/api/v1/vader/live/uk",
     { next: { revalidate: 300 } },
   )
-  return res.json().catch((error) => {
-    captureMessage(error)
-  })
+  return res.json()
 }
 
 async function getTopNewsData() {
@@ -17,9 +15,7 @@ async function getTopNewsData() {
     "https://positive-press-api.herokuapp.com/api/v1/vader/summary/pos/top",
     { next: { revalidate: 600 } },
   )
-  return res.json().catch((error) => {
-    captureMessage(error)
-  })
+  return res.json()
 }
 
 export default async function NewsHome() {
