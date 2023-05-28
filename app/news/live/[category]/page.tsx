@@ -1,3 +1,4 @@
+import { captureMessage } from "@sentry/nextjs";
 import NewsList from "../../../components/NewsList"
 
 async function getData(category: string) {
@@ -6,7 +7,7 @@ async function getData(category: string) {
     { next: { revalidate: 300 } },
   )
   if (!res.ok) {
-    throw new Error("Failed to fetch live news")
+    captureMessage(res.statusText)
   }
   return res.json()
 }

@@ -1,3 +1,4 @@
+import { captureMessage } from "@sentry/nextjs"
 import FrontPageLargeArticle from "../components/FrontPageLargeArticle"
 import TopNewsHeadlineList from "../components/TopNewsHeadlineList"
 
@@ -7,7 +8,7 @@ async function getNewsData() {
     { next: { revalidate: 300 } },
   )
   return res.json().catch((error) => {
-    throw new Error("getData live UK Error:", error)
+    captureMessage(error)
   })
 }
 
@@ -17,7 +18,7 @@ async function getTopNewsData() {
     { next: { revalidate: 600 } },
   )
   return res.json().catch((error) => {
-    throw new Error("getData db Top Error: ", error)
+    captureMessage(error)
   })
 }
 

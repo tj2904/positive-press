@@ -1,3 +1,4 @@
+import { captureMessage } from "@sentry/nextjs"
 import TopStoredArticle from "../../components/TopStoredArticle"
 
 async function getTopNewsData() {
@@ -6,7 +7,7 @@ async function getTopNewsData() {
     { next: { revalidate: 600 } },
   )
   return res.json().catch((error) => {
-    console.error("getData Error: ", error)
+    captureMessage(error)
   })
 }
 
