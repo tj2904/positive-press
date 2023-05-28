@@ -8,7 +8,7 @@ async function getNewsData() {
     { next: { revalidate: 300 } },
   )
   return res.json().catch((error) => {
-    console.error("getData UK Error: ", error)
+    throw new Error("getData live UK Error:", error)
   })
 }
 
@@ -18,7 +18,7 @@ async function getTopNewsData() {
     { next: { revalidate: 600 } },
   )
   return res.json().catch((error) => {
-    console.error("getData db Top Error: ", error)
+    throw new Error("getData db Top Error: ", error)
   })
 }
 
