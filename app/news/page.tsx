@@ -1,7 +1,6 @@
 import FrontPageLargeArticle from "../components/FrontPageLargeArticle"
 import TopNewsHeadlineList from "../components/TopNewsHeadlineList"
 
-// This is a trial page to test the API and other things
 async function getNewsData() {
   const res = await fetch(
     "https://positive-press-api.herokuapp.com/api/v1/vader/live/uk",
