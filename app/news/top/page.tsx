@@ -4,19 +4,22 @@ async function getTopNewsData() {
   const res = await fetch(
     "https://positive-press-api.herokuapp.com/api/v1/vader/summary/pos/top",
     { next: { revalidate: 600 } },
-  )
+    )
   return res.json().catch((error) => {
     console.error("getData Error: ", error)
   })
 }
 
+
 export default async function highestRatedNews() {
   const topNewsData = await getTopNewsData()
-  const sortedTopNews = topNewsData.data._items.sort((a: NewsResponse, b: NewsResponse) => {
-    if (a.vaderSummary.compound > b.vaderSummary.compound) {
-      return -1
-    }
-  })
+  const sortedTopNews = topNewsData?.data?._items?.sort(
+    (a: NewsResponse, b: NewsResponse) => {
+      if (a.vaderSummary.compound > b.vaderSummary.compound) {
+        return -1
+      }
+    },
+  )
 
   const news = sortedTopNews.map((article: NewsResponse) => {
     return <TopStoredArticle {...article} />
