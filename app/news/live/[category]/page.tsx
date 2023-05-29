@@ -6,7 +6,7 @@ async function getData(category: string) {
     { next: { revalidate: 300 } },
   )
   if (!res.ok) {
-    throw new Error("Failed to fetch live news")
+    console.log(res.statusText)
   }
   return res.json()
 }
