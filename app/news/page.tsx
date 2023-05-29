@@ -25,12 +25,12 @@ export default async function NewsHome() {
     }
   })
   const news = sortedNews.slice(0, 1)
-  const singleNews = news.map((article: NewsResponse) => {
+  const singleNews = news?.map((article: NewsResponse) => {
     return <FrontPageLargeArticle {...article} />
   })
 
   const topNewsData: any = await getTopNewsData()
-  const sortedTopNews = topNewsData.data._items.sort(
+  const sortedTopNews = topNewsData?.data?._items?.sort(
     (a: NewsResponse, b: NewsResponse) => {
       if (a.vaderSummary.compound > b.vaderSummary.compound) {
         return -1

@@ -21,7 +21,7 @@ export default async function highestRatedNews() {
     },
   )
 
-  const news = sortedTopNews.map((article: NewsResponse) => {
+  const news = sortedTopNews?.map((article: NewsResponse) => {
     return <TopStoredArticle {...article} />
   })
   return (
