@@ -17,7 +17,7 @@ function Article(props: NewsResponse) {
         setOgImage(data.image)
       })
       .catch((error) => {
-        throw new Error("getOgImage Error: ", error)
+        console.error("getOgImage: ", error)
       })
   }
 

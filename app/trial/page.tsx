@@ -8,7 +8,7 @@ async function getNewsData() {
     { next: { revalidate: 300 } },
   )
   return res.json().catch((error) => {
-    throw new Error("getData live UK Error:", error)
+    console.error("getData UK Error: ", error)
   })
 }
 
@@ -18,11 +18,11 @@ async function getTopNewsData() {
     { next: { revalidate: 600 } },
   )
   return res.json().catch((error) => {
-    throw new Error("getData db Top Error: ", error)
+    console.error("getData db Top Error: ", error)
   })
 }
 
-export default async function NewsHome() {
+export default async function Page() {
   const liveNews: any = await getNewsData()
   const sortedNews = liveNews.sort((a: NewsResponse, b: NewsResponse) => {
     if (a.vaderSummary.compound > b.vaderSummary.compound) {

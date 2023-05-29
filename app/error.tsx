@@ -11,11 +11,11 @@ export default function Error({
 }) {
   useEffect(() => {
     // Log the error to an error reporting service
-    throw error
+    console.error(error)
   }, [error])
 
   return (
-    <div className="mx-auto">
+    <div>
       <h2 className="text-3xl font-extrabold tracking-tight text-gray-700 sm:text-4xl">Something went wrong!</h2>
       <p className="italic text-gray-500 mt-0 mb-4">We were not able to retrive the latest ranked news, please try again.</p>
       <button
