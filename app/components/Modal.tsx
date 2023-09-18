@@ -1,11 +1,11 @@
-import { Fragment, useRef, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import { HiBeaker } from "react-icons/hi";
+import { Fragment, useRef, useState } from "react"
+import { Dialog, Transition } from "@headlessui/react"
+import { HiBeaker } from "react-icons/hi"
 
 export default function Modal({ show, close }: any) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
-  const cancelButtonRef = useRef(null);
+  const cancelButtonRef = useRef(null)
 
   return (
     <Transition.Root show={show} as={Fragment}>
@@ -49,6 +49,7 @@ export default function Modal({ show, close }: any) {
                   <div className="mt-3 text-center sm:mt-5">
                     <Dialog.Title
                       as="h3"
+                      data-testid="modal-title"
                       className="text-base font-semibold leading-6 text-gray-900"
                     >
                       The site isn&apos;t ready for prime-time yet
@@ -87,5 +88,5 @@ export default function Modal({ show, close }: any) {
         </div>
       </Dialog>
     </Transition.Root>
-  );
+  )
 }

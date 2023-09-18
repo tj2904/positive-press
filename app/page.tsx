@@ -6,7 +6,6 @@ import logo from "../public/images/logo-512x512.png"
 import Image from "next/image"
 
 export default function Home() {
-
   return (
     <div className="relative isolate overflow-hidden bg-gray-900">
       <div
@@ -29,7 +28,7 @@ export default function Home() {
               <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
                 Now Live
               </span>
-               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
+              <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
                 <span>Just shipped v1.0</span>
                 <HiChevronRight
                   className="h-5 w-5 text-gray-500"
@@ -47,12 +46,9 @@ export default function Home() {
             algorthims that find the most up-beat and heart-warming stories.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <button
-              className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-            >
-              <a 
-              href="/news" >
-              <HiRocketLaunch className="inline mr-2" /> Launch the App
+            <button className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+              <a href="/news" data-testid="homepage-main-button">
+                <HiRocketLaunch className="inline mr-2" /> Launch the App
               </a>
             </button>
             <a
@@ -67,7 +63,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-              <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <Image
               src={screenshot}
