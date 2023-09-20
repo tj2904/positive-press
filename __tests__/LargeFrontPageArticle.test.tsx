@@ -33,4 +33,10 @@ it("renders FrontPageLargeArticle elements correctly", () => {
   expect(screen.getByTestId("frontPageLargeArticle-title")).toHaveTextContent(
     "Test Short Title",
   )
+  expect(screen.getByTestId("frontPageLargeArticle-summary")).toHaveTextContent(
+    "This is the test summary string. This includes more information about the article.",
+  )
+  expect(screen.getByTestId("frontPageLargeArticle-date")).toHaveTextContent(
+    "24/1/2023",
+  )
 })

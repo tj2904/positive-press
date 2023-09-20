@@ -33,7 +33,12 @@ function Article(props: NewsResponse) {
         alt="bbc news image"
         crossOrigin="anonymous"
       />
-      <p className="my-2 text-gray-700">{props.summary}</p>
+      <p
+        className="my-2 text-gray-700"
+        data-testid="frontPageLargeArticle-summary"
+      >
+        {props.summary}
+      </p>
       <p className="text-right text-blue-800 my-2">
         <a
           href={props.id}
@@ -46,7 +51,7 @@ function Article(props: NewsResponse) {
         <div>
           <SiBbc size={40} />
         </div>
-        <div>{date}</div>
+        <div data-testid="frontPageLargeArticle-date">{date}</div>
       </div>
     </div>
   )

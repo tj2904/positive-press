@@ -30,7 +30,8 @@ function Article(props: NewsResponse) {
   return (
     <div
       key={props.id}
-      className="border border-slate-500 p-4 rounded-md shadow-md "
+      className="border border-slate-500 p-4 rounded-md shadow-md"
+      data-testid="topStoredArticle-div"
     >
       <PositivityRankingBar
         vaderSummaryCompound={props.vaderSummary.compound}
@@ -64,6 +65,7 @@ function Article(props: NewsResponse) {
       <p className="text-right text-blue-800 my-2">
         <a
           href={props.id}
+          data-testid="topStoredArticle-link"
           className=" bg-slate-300 rounded hover:bg-slate-400 p-1 px-3"
         >
           Read more...

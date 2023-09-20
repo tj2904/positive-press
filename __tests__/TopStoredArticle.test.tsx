@@ -31,18 +31,9 @@ const mockedNewsResponse = {
 it("renders without error", () => {
   render(<TopStoredArticle {...mockedNewsResponse} />)
 
-  // expect(screen.getByTestId("topNewsHeadlineList-div-0")).toBeInTheDocument()
-  // expect(screen.getByTestId("topNewsHeadlineList-rating-0")).toHaveTextContent(
-  //   "60.0%",
-  // )
-  // expect(screen.getByTestId("topNewsHeadlineList-link-0")).toHaveTextContent(
-  //   "Read more...",
-  // )
-  // expect(screen.getByTestId("topNewsHeadlineList-div-1")).toBeInTheDocument()
-  // expect(screen.getByTestId("topNewsHeadlineList-rating-1")).toHaveTextContent(
-  //   "30.0%",
-  // )
-  // expect(screen.getByTestId("topNewsHeadlineList-link-1")).toHaveTextContent(
-  //   "Read more...",
-  // )
+  expect(screen.getByTestId("topStoredArticle-div")).toBeInTheDocument()
+  expect(screen.getByTestId("article-rating")).toBeInTheDocument()
+  expect(screen.getByTestId("topStoredArticle-link")).toHaveTextContent(
+    "Read more...",
+  )
 })

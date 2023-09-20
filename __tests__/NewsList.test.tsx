@@ -30,7 +30,7 @@ const mockedNewsResponse = {
         "https://ichef.bbci.co.uk/news/1024/branded_news/7D7E/production/_129262123_p0fdmdt5.jpg",
     },
     {
-      title: "Test Short Title",
+      title: "Test Short Title 2",
       summary:
         "This is the test summary string. This includes more information about the article.",
       vaderTitle: {
@@ -59,18 +59,6 @@ const mockedNewsResponse = {
 it("renders without error", () => {
   render(<NewsList {...mockedNewsResponse} />)
 
-  // expect(screen.getByTestId("topNewsHeadlineList-div-0")).toBeInTheDocument()
-  // expect(screen.getByTestId("topNewsHeadlineList-rating-0")).toHaveTextContent(
-  //   "60.0%",
-  // )
-  // expect(screen.getByTestId("topNewsHeadlineList-link-0")).toHaveTextContent(
-  //   "Read more...",
-  // )
-  // expect(screen.getByTestId("topNewsHeadlineList-div-1")).toBeInTheDocument()
-  // expect(screen.getByTestId("topNewsHeadlineList-rating-1")).toHaveTextContent(
-  //   "30.0%",
-  // )
-  // expect(screen.getByTestId("topNewsHeadlineList-link-1")).toHaveTextContent(
-  //   "Read more...",
-  // )
+  expect(screen.getByText("Test Short Title")).toBeInTheDocument()
+  expect(screen.getByText("Test Short Title 2")).toBeInTheDocument()
 })
