@@ -8,7 +8,11 @@ export default function TopNewsHeadlineList(props: any) {
     }
 
     return (
-      <div className="" data-testid={`topNewsHeadlineList-div-${index}`}>
+      <div
+        className=""
+        data-testid={`topNewsHeadlineList-div-${index}`}
+        key={index}
+      >
         {/* https://flowbite.com/docs/typography/hr/ */}
         <div className="inline-flex items-center w-full justify-between">
           <hr className="w-2/5 h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
