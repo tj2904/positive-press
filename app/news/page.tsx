@@ -29,8 +29,8 @@ export default async function NewsHome() {
     }
   })
   const news = sortedNews.slice(0, 1)
-  const singleNews = news.map((article: NewsResponse) => {
-    return <FrontPageLargeArticle {...article} />
+  const singleNews = news.map((article: NewsResponse, index: string) => {
+    return <FrontPageLargeArticle {...article} key={index} />
   })
 
   const topNewsData: any = await getTopNewsData()

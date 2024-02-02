@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
-  },
+  experimental: {},
   images: {
     remotePatterns: [
       {
@@ -58,15 +56,14 @@ const securityHeaders = [
   {
     key: "Cross-Origin-Resource-Policy",
     value: "cross-origin",
-  }
+  },
 ]
 
 module.exports = nextConfig
 
-
 // Inected Content via Sentry Wizard Below
 
-const { withSentryConfig } = require("@sentry/nextjs");
+const { withSentryConfig } = require("@sentry/nextjs")
 
 module.exports = withSentryConfig(
   module.exports,
@@ -98,5 +95,5 @@ module.exports = withSentryConfig(
 
     // Automatically tree-shake Sentry logger statements to reduce bundle size
     disableLogger: true,
-  }
-);
+  },
+)
