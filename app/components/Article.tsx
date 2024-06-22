@@ -1,12 +1,11 @@
-
-import { SiBbc } from "react-icons/si";
-import PositivityRankingBar from "./PositivityRankingBar";
+import { FcBbc } from "react-icons/fc"
+import PositivityRankingBar from "./PositivityRankingBar"
 
 function Article(props: NewsResponse) {
-
-  const rating = (props.vaderSummary.compound * 100) + "%"
-  const negRating = (-(props.vaderSummary.compound) * 100) + "%"
-  const date = props.published[2] + "/" + props.published[1] + "/" + props.published[0]
+  const rating = props.vaderSummary.compound * 100 + "%"
+  const negRating = -props.vaderSummary.compound * 100 + "%"
+  const date =
+    props.published[2] + "/" + props.published[1] + "/" + props.published[0]
 
   return (
     <div
@@ -26,18 +25,17 @@ function Article(props: NewsResponse) {
       >
         {props.title}
       </h3>
-     
-          <img
-            className="rounded-md"
-            src={props.imageUrl}
-            width="1024"
-            height="576"
-            alt="bbc news image"
-            crossOrigin="anonymous"
-            data-testid="article-image"
-          />
-        
-       
+
+      <img
+        className="rounded-md"
+        src={props.imageUrl}
+        width="1024"
+        height="576"
+        alt="bbc news image"
+        crossOrigin="anonymous"
+        data-testid="article-image"
+      />
+
       <p className="my-2 text-gray-700" data-testid="article-summary">
         {props.summary}
       </p>
@@ -52,7 +50,7 @@ function Article(props: NewsResponse) {
       </p>
       <div className="flex justify-between items-center text-slate-600 -mb-2">
         <div>
-          <SiBbc size={40} />
+          <FcBbc size={40} />
         </div>
         <div data-testid="article-date">{date}</div>
       </div>

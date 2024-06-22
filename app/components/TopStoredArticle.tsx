@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-import { SiBbc } from "react-icons/si"
+import { FcBbc } from "react-icons/fc"
 import Image from "next/image"
 import PositivityRankingBar from "./PositivityRankingBar"
 
@@ -73,7 +73,7 @@ function Article(props: NewsResponse) {
       </p>
       <div className="flex justify-between items-center text-slate-600 -mb-2">
         <div>
-          <SiBbc size={40} />
+          <FcBbc size={40} />
         </div>
         <div>{date}</div>
       </div>
