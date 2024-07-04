@@ -1,26 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Positive Press:  _Sorting Newsheadlines to find the postive_
+![screenshot-trial-page-compressed](https://github.com/tj2904/positive-press/assets/3164936/56bf6169-55fd-44ae-a1a3-42188f7a05aa)
 
-## Getting Started
+A web app that uses Natural Language Processing (NLP) to analyse news headlines and provide a curated feed of news ranked by positivity. This is the responsive frontend app, built in NextJS to demonstrate the utility of the APIs. 
+There is an accompanying [repo](https://www.github.com/tj2904/pp-api) for the Python backend.
 
-First,install dependencies, then run the development server:
+[Visit the app deployed on Vercel](https://positive-press.vercel.app/), or read a little more about it in my [Portfolio Entry](https://tj2904.com/positive-press).
 
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Tech Stack:
+* NextJS, with App router
+* TypeScript
+* TailwindCSS
+* Next Font - Custom Font loading
+* Next Image
+* Jest - Component Testing
+* Github Actions
+* Sentry
