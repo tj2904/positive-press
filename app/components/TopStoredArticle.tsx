@@ -25,7 +25,7 @@ function Article(props: NewsResponse) {
 
   useEffect(() => {
     if (!props.imageUrl) {
-      getOgImage(`${props.id}`)
+      getOgImage(`${props.itemUrl}`)
     }
   }, [props])
 
