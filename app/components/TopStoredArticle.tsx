@@ -11,7 +11,9 @@ function Article(props: NewsResponse) {
   const date = props.published.split(" ").slice(0, 4).join(" ")
   const [ogImage, setOgImage] = useState<string>()
   async function getOgImage(url: string) {
-    await fetch(`https://i3g7qv.deta.dev/api/v1/og/?url=${url}`)
+    await fetch(
+      `https://positive-press-api.herokuapp.com/api/v1/og/?url=${url}`,
+    )
       .then((res) => res.json())
       .then((data) => {
         setOgImage(data.image)
@@ -23,13 +25,13 @@ function Article(props: NewsResponse) {
 
   useEffect(() => {
     if (!props.imageUrl) {
-      getOgImage(`${props.id}`)
+      getOgImage(`${props.itemUrl}`)
     }
   }, [props])
 
   return (
     <div
-      key={props.id}
+      key={props.itemUrl}
       className="border border-slate-500 p-4 rounded-md shadow-md"
       data-testid="topStoredArticle-div"
     >
@@ -64,7 +66,7 @@ function Article(props: NewsResponse) {
       <p className="my-2 text-gray-700">{props.summary}</p>
       <p className="text-right text-blue-800 my-2">
         <a
-          href={props.id}
+          href={props.itemUrl}
           data-testid="topStoredArticle-link"
           className=" bg-slate-300 rounded hover:bg-slate-400 p-1 px-3"
         >
