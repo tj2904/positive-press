@@ -34,7 +34,7 @@ export default function TopNewsHeadlineList(props: any) {
           {h.title}
         </h3>
         <a
-          href={h.id}
+          href={h.itemUrl}
           className="text-gray-600 text-sm"
           data-testid={`topNewsHeadlineList-link-${index}`}
         >

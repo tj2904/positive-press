@@ -9,7 +9,7 @@ function Article(props: NewsResponse) {
 
   return (
     <div
-      key={props.id}
+      key={props.itemUrl}
       className="border border-slate-500 p-4 rounded-md shadow-md "
     >
       <PositivityRankingBar
@@ -41,7 +41,7 @@ function Article(props: NewsResponse) {
       </p>
       <p className="text-right text-blue-800 my-2">
         <a
-          href={props.id}
+          href={props.itemUrl}
           className=" bg-slate-300 rounded hover:bg-slate-400 p-1 px-3"
           data-testid="article-readmore-link"
         >
