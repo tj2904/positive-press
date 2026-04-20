@@ -16,11 +16,9 @@ async function getTopNewsData() {
 
 export default async function highestRatedNews() {
   const topNewsData: NewsResponse[] = await getTopNewsData()
-  const sortedTopNews = topNewsData.sort(
-    (a: NewsResponse, b: NewsResponse) => {
-      return b.vaderSummary.compound - a.vaderSummary.compound
-    },
-  )
+  const sortedTopNews = topNewsData.sort((a: NewsResponse, b: NewsResponse) => {
+    return b.vaderSummary.compound - a.vaderSummary.compound
+  })
 
   const news = sortedTopNews.map((article: NewsResponse, index: number) => {
     const { key: _key, ...articleProps } = article as NewsResponse & {

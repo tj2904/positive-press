@@ -48,11 +48,9 @@ export default async function NewsHome() {
   })
 
   const topNewsData: NewsResponse[] = await getTopNewsData()
-  const sortedTopNews = topNewsData.sort(
-    (a: NewsResponse, b: NewsResponse) => {
-      return b.vaderSummary.compound - a.vaderSummary.compound
-    },
-  )
+  const sortedTopNews = topNewsData.sort((a: NewsResponse, b: NewsResponse) => {
+    return b.vaderSummary.compound - a.vaderSummary.compound
+  })
 
   const top5News = sortedTopNews.slice(0, 5)
 
