@@ -30,7 +30,7 @@ export default function TopNewsHeadlineList(props: any) {
             {percentage(h.vaderSummary.compound)}
           </div>
         </div>
-        <h3 key={h.key} className="text-m font-serif">
+        <h3 className="text-m font-serif">
           {h.title}
         </h3>
         <a

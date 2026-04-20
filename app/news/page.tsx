@@ -2,43 +2,55 @@ import FrontPageLargeArticle from "../components/FrontPageLargeArticle"
 import TopNewsHeadlineList from "../components/TopNewsHeadlineList"
 
 async function getNewsData() {
-  const res = await fetch(
-    "https://positive-press-api.herokuapp.com/api/v1/vader/live/uk",
-    { next: { revalidate: 300 } },
-  )
-  return res.json().catch((error) => {
-    throw new Error("getData live UK Error:", error)
-  })
+  try {
+    const res = await fetch(
+      "https://positive-press-api.herokuapp.com/api/v1/vader/live/uk",
+      { next: { revalidate: 300 } },
+    )
+    if (!res.ok) return []
+    const data = await res.json()
+    return Array.isArray(data) ? data : []
+  } catch {
+    return []
+  }
 }
 
 async function getTopNewsData() {
-  const res = await fetch(
-    "https://positive-press-api.herokuapp.com/api/v1/vader/summary/pos/top",
-    { next: { revalidate: 600 } },
-  )
-  return res.json().catch((error) => {
-    throw new Error("getData db Top Error: ", error)
-  })
+  try {
+    const res = await fetch(
+      "https://positive-press-api.herokuapp.com/api/v1/vader/summary/pos/top",
+      { next: { revalidate: 600 } },
+    )
+    if (!res.ok) return []
+    const data = await res.json()
+    return data?.data?._items ?? []
+  } catch {
+    return []
+  }
 }
 
 export default async function NewsHome() {
-  const liveNews: any = await getNewsData()
+  const liveNews: NewsResponse[] = await getNewsData()
   const sortedNews = liveNews.sort((a: NewsResponse, b: NewsResponse) => {
-    if (a.vaderSummary.compound > b.vaderSummary.compound) {
-      return -1
-    }
+    return b.vaderSummary.compound - a.vaderSummary.compound
   })
   const news = sortedNews.slice(0, 1)
-  const singleNews = news.map((article: NewsResponse, index: string) => {
-    return <FrontPageLargeArticle {...article} key={index} />
+  const singleNews = news.map((article: NewsResponse, index: number) => {
+    const { key: _key, ...articleProps } = article as NewsResponse & {
+      key?: string
+    }
+    return (
+      <FrontPageLargeArticle
+        {...articleProps}
+        key={articleProps.itemUrl || `${index}`}
+      />
+    )
   })
 
-  const topNewsData: any = await getTopNewsData()
-  const sortedTopNews = topNewsData.data._items.sort(
+  const topNewsData: NewsResponse[] = await getTopNewsData()
+  const sortedTopNews = topNewsData.sort(
     (a: NewsResponse, b: NewsResponse) => {
-      if (a.vaderSummary.compound > b.vaderSummary.compound) {
-        return -1
-      }
+      return b.vaderSummary.compound - a.vaderSummary.compound
     },
   )
 

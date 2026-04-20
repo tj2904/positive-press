@@ -20,7 +20,6 @@ const mockedNewsResponse = {
     pos: 0.78,
   },
   id: "https://www.bbc.co.uk/news/uk-england-leeds-65168813",
-  key: "test-key-1",
   published: "Wed,23rd,June,2022,10:33:27",
   region: "england",
   source: "bbc",
