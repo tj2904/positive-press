@@ -14,7 +14,6 @@ type NewsResponse = {
     pos: number
   }
   itemUrl: string
-  key: string
   published: Array
   region: string
   source: string

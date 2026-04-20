@@ -20,7 +20,6 @@ const mockedNewsResponse = {
     pos: 0.78,
   },
   id: "https://www.bbc.co.uk/news/uk-england-leeds-65168813",
-  key: "test-key-1",
   published: [2023, 1, 24, 21, 33, 59, 1, 24, 0],
   region: "england",
   source: "bbc",
@@ -28,15 +27,14 @@ const mockedNewsResponse = {
     "https://ichef.bbci.co.uk/news/1024/branded_news/7D7E/production/_129262123_p0fdmdt5.jpg",
 }
 
-
 it("renders nav bar unchanged", () => {
   const { container } = render(<Header />)
   expect(container).toMatchSnapshot()
 })
 
 it("renders PostivityRankingBar with green", () => {
-const { greenBar } = render(<PositivityRankingBar props={0.88} />)
-expect(greenBar).toMatchSnapshot()
+  const { greenBar } = render(<PositivityRankingBar props={0.88} />)
+  expect(greenBar).toMatchSnapshot()
 })
 
 it("renders PostivityRankingBar with red", () => {
